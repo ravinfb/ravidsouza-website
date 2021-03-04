@@ -11,7 +11,7 @@ ENV RAVI=AWESOME \
 
 RUN mkdir -p /var/www
 RUN touch /var/www/thisworked.txt
-RUN cd /var/www && git clone https://github.com/ravinfb/ravidsouza-website.git
+RUN cd /var/www && git clone https://github.com/ravinfb/ravidsouza-website.git && cd ravidsouza-website && git pull
 RUN rm -rf /var/www/html
 RUN cd /var/www && ln -s ravidsouza-website/docker-test/html
 
